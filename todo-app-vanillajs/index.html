@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Todo App with simple css and vanilla js</title>
+    <link rel="stylesheet" href="./styles.css">
+</head>
+<body>
+    <!-- Todo App -->
+    <div class="container">
+        <h1 class="title">Todo App</h1>
+        <p class="subtitle">Todo App made with love</p>
+        <form class="todoForm">
+            <div class="todoInputField">
+                <label for="todoItem">Enter a todo</label>
+                <input type="text" name="todoItem" placeholder="enter a todo.." id="todoItem"/>
+            </div>
+            <button type="submit" class="btn btn-submit">Add TODO</button>
+        </form>
+
+        <div class="todo-list-container">
+            <!-- here we add the todo items card via js -->
+        </div>
+    </div>
+
+    <script src="./index.js"></script>
+</body>
+</html>
