@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Weather App</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <div class="container">
+        <!-- side navbar  -->
+        <nav class="side-navbar">
+            <div class="logo">
+                <a href="/">
+                    <img src="./images/logo.svg" alt="logo not found">
+                </a>
+            </div>
+            <div class="nav-icons-wrapper">
+                <a href="#" class="nav-link active">
+                    <img src="./images/search.svg" alt="search icon">
+                </a>
+                <a href="#" class="nav-link" >
+                    <img src="./images/chart.svg" alt="chart icon">
+                </a>
+            </div>
+        </nav>
+        <!-- container body -->
+        <div class="container-body">
+            <div class="container-body-header">
+                <form  class="search-weather-form">
+                    <div class="form-item">
+                        <label for="location">Enter a location</label>
+                        <input type="text" name="location" id="location"/>
+                    </div>
+                    <button type="submit" class="btn btn-submit">
+                        Submit
+                        <!-- <img src="./images/search.svg" class="search-btn" alt="search"> -->
+                    </button>
+                </form>
+            </div>
+            <div class="container-body-body">
+                <!-- here we display the data -->
+                <div class="data-wrapper-slideup">
+                    <span class="click-up-btn">
+                        <img src="./images/down-arrow.svg" class="down-link" alt="arrow not found">
+                    </span>
+                    <div class="wrap">
+                        <div class="data top-pane">
+                            <div class="left">
+                                <h3 class="title">London</h3>
+                                <h1 class="temperature">23&deg;C</h1>
+                                <h3 class="summary">I   t's rainy</h3>
+                            </div>
+                            <div class="right">
+                                <img src="./images/rain-icon.svg" alt="image not found">
+                            </div>
+                        </div>
+    
+                        <div class="data bottom-pane">
+                            <h3 class="data-additional">Precipitation : <span class="precipitation val">3</span>%</h3>
+                            <p class="data-additional">Humidity : <span class="humdity val"></span>  45%  </p>
+                            <p class="data-additional">Wind Speed : <span class="windSpeed val">34</span>km/hr</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+    </div>
+    <script src="./script.js"></script>
+</body>
+</html>
