@@ -1,0 +1,133 @@
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@100;300&display=swap');
+
+*,
+*::after,
+*::before{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Montserrat', sans-serif;
+}
+
+:root{
+    --clr-text:#eb7d7d;
+    --clr-bg-dark:#292323;
+    --clr-shadow:#382020;
+    --clr-text-secondary : #fffc;
+}
+
+a{
+    text-decoration: none;
+    color:var(--clr-text-secondary);
+}
+
+img{
+    max-width: 100%;
+}
+
+body
+{
+    margin: 0;
+    padding: 0;
+    width:100%;
+    min-height: 100vh;
+    background-image:linear-gradient(45deg, rgba(43, 214, 157, 0.685), rgba(21, 77, 57, 0.692)), url('./assets/bg-img.jpg');
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: center center;
+}
+
+.container{
+    min-height: 100vh;
+    padding:1rem;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+}
+
+.title{
+    font-size:25vw;
+    color: aquamarine;
+    text-shadow: 4px 4px 5px aquamarine;
+}
+
+.subtitle{
+    font-size:2vw;
+    font-weight: bold;
+    color: rgb(0, 255, 170);
+    margin-bottom: 1rem;
+}
+
+.btn{
+    padding:1rem;
+    font-size:2vw;
+    border: none;
+    border-radius: 5em;
+    margin: 1.5rem 0;
+    background: aquamarine;
+    color: rgb(38, 102, 83);
+    font-weight: bolder;
+    box-shadow: 0 0 10px 2px aquamarine;
+    cursor: pointer;
+    position: relative;
+    background:linear-gradient(-45deg, rgba(0, 255, 170, 0.966), rgb(8, 119, 80));
+    transition: 0.3s ease-in all;
+}
+
+.btn:hover{
+    color:aquamarine;
+    background:linear-gradient(-45deg, rgba(32, 43, 39, 0.966), rgb(8, 119, 80));
+}
+
+
+.btn:hover::after{
+    content: '';
+    width:100%;
+    height:100%;
+    position: absolute;
+    top: 0;
+    left: 0;
+    border-radius: 5em;
+    background-color: aquamarine;
+    box-shadow: 0 0 15px 5px aquamarine;
+    animation: fadeOut 0.7s ease-in infinite forwards;
+    z-index: -1;
+}
+
+.btn:hover::before{
+    content: '';
+    width:100%;
+    height:100%;
+    position: absolute;
+    top: 0;
+    left: 0;
+    border-radius: 5em;
+    background-color: aquamarine;
+    box-shadow: 0 0 15px 5px aquamarine;
+    z-index:-2;
+}
+
+@keyframes fadeOut{
+    from{
+        opacity:0.35;
+        transform:scale(1);
+    }
+    to{
+        opacity:0;
+        transform: scale(1.5);
+    }
+}
+
+
+@media screen and (max-width:500px){
+    .title{
+        font-size:30vw;
+    }
+    .subtitle{
+        font-size:3vw;
+    }
+    .btn{
+        font-size:5vw;
+    }
+}
