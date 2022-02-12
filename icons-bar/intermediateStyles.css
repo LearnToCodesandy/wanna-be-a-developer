@@ -1,0 +1,68 @@
+.design-container{
+    width:100%;
+    display: flex;
+    align-items: flex-start;
+    justify-content: center;
+    flex-direction: column;
+    border-radius: 5px;
+}
+
+.design-icon{
+    width:100%;
+    display: flex;
+    align-items: center;
+    justify-content: flex-start;
+    text-decoration: none;
+}
+
+.design-icon .fa{
+    text-decoration: none;
+    padding: 2rem;
+    text-decoration: none;
+    font-size: 1.5rem;
+    color: var(--bittersweet);
+    border: 2px solid var(--bittersweet);
+    margin: 0.2rem 0;
+}
+
+.design-icon .fa:hover{
+    background-color: var(--bittersweet);
+    color: var(--space-cadet);
+    box-shadow:  0 0 1.5px 1px var(--shade-bittersweet);
+    transition: 0.25s ease-in all;
+}
+
+.hoverReveal{
+    flex:1;
+    width: 100%;
+    text-align: right;
+    padding: 2rem;
+    background-color: var(--bittersweet);
+    font-size: 1.4rem;
+    color: var(--space-cadet);
+    font-weight: bold;
+    transform-origin: top left;
+    display: none;
+    padding-right: 2.5rem;
+    animation: slideRight 0.3s ease-in forwards;
+}
+
+/* this is the way we say that what ever is the sibling of fa-icon whenever it is hovered apply hoverReveal class to its sibling */
+.design-icon>.fa:hover ~ .hoverReveal{
+    display:block;
+}
+
+.design-icon:hover .hoverReveal{
+    display: 'block';
+}
+
+@keyframes slideRight{
+    from{
+        opacity:0;
+        transform: scaleX(0);
+    }
+    to{
+        opacity:1;
+        transform: scaleX(1);
+    }
+}

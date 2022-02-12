@@ -1,0 +1,94 @@
+/* icon bar container styles */
+.icon-bar-container{
+    max-width:75%;
+    margin: 0 auto;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+    margin-bottom: 2rem ;
+}
+
+.design-title{
+    font-weight: regular;
+    padding: 0.5rem 0;
+    color: var(--green-yellow-crayola);
+}
+
+.link-wrapper{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background-color: var(--green-yellow-crayola);
+    border-radius: 5px;
+}
+
+.icon-link-item{
+    padding:1.5rem;
+    font-size:1.5rem;
+    margin: 0.5rem;
+    color: var(--space-cadet);
+}
+
+.icon-link-item:hover{
+    color: var(--green-yellow-crayola);
+    background-color: var(--shade-space-cadet);
+    border-radius: 5px;
+    transition: 0.2s ease-in all;
+    box-shadow: 0 0 4px 1px var(--shade-space-cadet);
+}
+
+/* container 2 styles */
+.container-2{
+    margin-top: 2rem;
+    padding:0;
+}
+
+.container-2 .icon-link-item{
+    margin:0;
+}
+
+.container-2 .icon-link-item:hover{
+    border-radius: 0;
+    box-shadow: 0 0 0 0 transparent;
+}
+
+.active-2{
+    background-color: var(--space-cadet);
+    color: var(--green-yellow-crayola);
+}
+
+/* contaier 3 styles */
+.container-3{
+    margin-top: 2rem;
+    background-color: transparent;
+}
+
+.container-3 .link-wrapper{
+    background-color: transparent;
+}
+
+.container-3 .icon-link-item{
+    margin: 0.75rem;
+    color: var(--green-yellow-crayola);
+    font-size:1rem;
+    border-radius: 50%;
+}
+
+
+.container-3 .icon-link-item:hover{
+    transform: scale(1.25);
+    border-radius: 50%;
+    box-shadow: rgba(149, 157, 165, 0.2) 0px 8px 24px;
+}
+
+.active-3{
+    transform: scale(1.12);
+    border:2px solid var(--green-yellow-crayola);
+    color: var(--space-cadet);
+}
+
+.active-3:hover{
+    border: 2px solid transparent;
+}
+
